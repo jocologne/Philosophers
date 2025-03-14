@@ -6,13 +6,13 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 17:33:12 by jcologne          #+#    #+#             */
-/*   Updated: 2025/03/10 17:58:52 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/03/14 17:41:20 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-void	input_data(t_data *data, char **av)
+void	fill_data(t_data *data, char **av)
 {
 	data->philos_nbr = ft_atol(av[1]);
 	data->die_time = ft_atol(av[2]);

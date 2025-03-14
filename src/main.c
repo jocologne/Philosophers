@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 14:43:12 by jcologne          #+#    #+#             */
-/*   Updated: 2025/03/10 19:27:42 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/03/14 17:38:46 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ int	main(int ac, char **av)
 
 	if (validate_arguments(ac, av))
 		return (1);
-	input_data(&data, av);
+	fill_data(&data, av);
 }

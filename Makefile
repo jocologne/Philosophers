@@ -9,7 +9,7 @@ OBJS = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
 NAME = philo
 
 #Exec Arguments
-EXEC_ARG = 1 2 3 4 5
+EXEC_ARG = 200 2 3 4
 
 # Rules
 all: $(NAME)

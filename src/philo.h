@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 14:44:12 by jcologne          #+#    #+#             */
-/*   Updated: 2025/03/10 18:00:36 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/03/14 17:38:33 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ int		alpha(char *str);
 long	ft_atol(const char *n);
 
 //INIT
-void	input_data(t_data *data, char **av);
+void	fill_data(t_data *data, char **av);
 
 #endif
