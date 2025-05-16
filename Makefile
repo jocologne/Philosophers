@@ -15,7 +15,7 @@ EXEC_ARG = 200 2 3 4
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+	@$(CC) $(CFLAGS) -pthread -o $(NAME) $(OBJS)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
 	@$(CC) -pthread $(CFLAGS) -c $< -o $@
@@ -29,6 +29,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
+	@rm -rm philo
 
 re: fclean all
 
@@ -36,5 +37,8 @@ run: $(NAME)
 	@./$(NAME) $(EXEC_ARG)
 
 rerun: re run
+
+val: $(NAME)
+	valgrind ./$(NAME) $(EXEC_ARG)
 
 .PHONY: all clean fclean re
