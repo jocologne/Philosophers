@@ -9,7 +9,7 @@ OBJS = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
 NAME = philo
 
 #Exec Arguments
-EXEC_ARG = 200 2 3 4
+EXEC_ARG = 10 300 100 100 4
 
 # Rules
 all: $(NAME)
@@ -24,12 +24,11 @@ $(OBJDIR):
 	@mkdir -p $(OBJDIR)
 
 clean:
-	@rm -f $(OBJS)
+	@rm -rf $(OBJS)
 	@rm -rf $(OBJDIR)
 
 fclean: clean
 	@rm -f $(NAME)
-	@rm -rm philo
 
 re: fclean all
 
