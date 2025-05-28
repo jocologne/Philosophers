@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 14:09:28 by jcologne          #+#    #+#             */
-/*   Updated: 2025/05/16 16:25:19 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/05/27 21:27:11 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ bool	is_valid_number(char *str)
 
 long	ft_atol(const char *n)
 {
-	int	sign;
+	int		sign;
 	long	num;
-	int	i;
+	int		i;
 
 	i = 0;
 	sign = 1;

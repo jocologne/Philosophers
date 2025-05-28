@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 17:33:12 by jcologne          #+#    #+#             */
-/*   Updated: 2025/05/26 20:39:33 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/05/27 22:16:52 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,8 @@ static void	init_forks(t_data *data, t_philo **philos)
 	{
 		left = i;
 		right = (i + 1) % data->philos_nbr;
-		if (i % 2 == 0)
-		{
-			(*philos)[i].left_fork = &data->forks[left];
-			(*philos)[i].right_fork = &data->forks[right];
-		}
-		else
-		{
-			(*philos)[i].right_fork = &data->forks[right];
-			(*philos)[i].left_fork = &data->forks[left];
-		}
+		(*philos)[i].left_fork = &data->forks[left];
+		(*philos)[i].right_fork = &data->forks[right];
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 12:07:33 by jcologne          #+#    #+#             */
-/*   Updated: 2025/05/16 17:55:00 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/05/27 22:43:55 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,8 @@ static void	update_meal_info(t_philo *philo)
 
 static void	eat_sleep_think(t_philo *philo)
 {
-	print_status(philo, "is eating");
+	if (philo->meals_eaten < philo->data->meals_limit)
+		print_status(philo, "is eating");
 	update_meal_info(philo);
 	precise_usleep(philo->data->eat_time);
 	pthread_mutex_unlock(philo->left_fork);
@@ -87,7 +88,7 @@ void	*routine(void *arg)
 
 	philo = (t_philo *)arg;
 	if (philo->id % 2 == 0)
-		precise_usleep(philo->data->eat_time / 10);
+		precise_usleep(10);
 	while (!check_sim_end(philo->data))
 	{
 		if (!take_forks(philo))

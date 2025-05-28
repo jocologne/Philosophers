@@ -6,7 +6,7 @@
 /*   By: jcologne <jcologne@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 14:43:12 by jcologne          #+#    #+#             */
-/*   Updated: 2025/05/26 20:34:17 by jcologne         ###   ########.fr       */
+/*   Updated: 2025/05/16 18:18:37 by jcologne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,7 @@ int	main(int ac, char **av)
 	t_philo		*philos;
 	pthread_t	monitor_thread;
 
-	if (!validate_arguments(ac, av))
-		return (1);
+	validate_arguments(ac, av);
 	fill_data(&data, av);
 	init_philos(&data, &philos);
 	if (!create_threads(&data, philos))

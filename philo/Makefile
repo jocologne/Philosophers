@@ -9,7 +9,7 @@ OBJS = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
 NAME = philo
 
 #Exec Arguments
-EXEC_ARG = 10 300 100 100 4
+EXEC_ARG = 4 500 200 200 4
 
 # Rules
 all: $(NAME)
@@ -38,6 +38,6 @@ run: $(NAME)
 rerun: re run
 
 val: $(NAME)
-	valgrind ./$(NAME) $(EXEC_ARG)
+	valgrind --tool=helgrind ./$(NAME) $(EXEC_ARG)
 
 .PHONY: all clean fclean re
